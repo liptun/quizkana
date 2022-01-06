@@ -1,9 +1,8 @@
 import { Link as LinkRouter } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import { themeSchema } from '../../Theme'
 
 const buttonBaseStyle = css`
-    ${({ theme }: { theme: themeSchema }) => css`
+    ${({ theme }) => css`
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
@@ -15,7 +14,7 @@ const buttonBaseStyle = css`
         padding: 0.1em;
         border-radius: 5px;
         cursor: pointer;
-        transition: all .2s ease-out;
+        transition: all 0.2s ease-out;
 
         &:hover {
             background-color: white;
@@ -38,7 +37,7 @@ const fancyButtonStyle = css`
         text-align: center;
         height: 100%;
         position: relative;
-        padding: 0.2em .6em;
+        padding: 0.2em 0.6em;
         transition: all 0.2s ease-out;
         top: 0;
     }

@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react'
 import { Toaster } from 'react-hot-toast'
 import { BrowserRouter } from 'react-router-dom'
 import { AppContext, AppContextSchema } from '../App'
-import Theme from '../Theme'
+import Theme from '../theme'
 
 interface Props {
     children?: ReactNode

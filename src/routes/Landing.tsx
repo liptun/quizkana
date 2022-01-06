@@ -1,14 +1,23 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import { FancyLinkPrimary, LinkPrimary } from '../components/shared/Button'
+import { FancyLinkPrimary } from '../components/shared/Button'
+import { panel } from '../theme/mixins'
 
 const Container = styled.div`
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     text-align: center;
+    padding: 2em;
+`
+
+const Box = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    ${panel}
 `
 
 const Title = styled.h1`
@@ -21,22 +30,22 @@ const Title = styled.h1`
 const Description = styled.p`
     margin-bottom: 1em;
 `
-const QuickStart = styled(FancyLinkPrimary)`
-    margin-bottom: 1em;
-`
+const QuickStart = styled(FancyLinkPrimary)``
 
 const Landing: FC = () => {
     return (
         <Container>
-            <Title>Quizkana</Title>
-            <Description>
-                A fun way to practise Japanese syllabary and learn basic
-                vocabulary
-            </Description>
-            <QuickStart to="/quiz">
-                <span>Quick start</span>
-                <span>クイックスタート</span>
-            </QuickStart>
+            <Box>
+                <Title>Quizkana</Title>
+                <Description>
+                    A fun way to practise Japanese syllabary and learn basic
+                    vocabulary
+                </Description>
+                <QuickStart to="/quiz">
+                    <span>Quick start</span>
+                    <span>クイックスタート</span>
+                </QuickStart>
+            </Box>
         </Container>
     )
 }
