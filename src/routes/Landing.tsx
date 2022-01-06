@@ -25,12 +25,11 @@ const Title = styled.h1`
     margin-bottom: 0.5em;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
 `
 const Description = styled.p`
     margin-bottom: 1em;
 `
-const QuickStart = styled(FancyLinkPrimary)``
 
 const Landing: FC = () => {
     return (
@@ -41,10 +40,10 @@ const Landing: FC = () => {
                     A fun way to practise Japanese syllabary and learn basic
                     vocabulary
                 </Description>
-                <QuickStart to="/quiz">
+                <FancyLinkPrimary to="/quiz">
                     <span>Quick start</span>
                     <span>クイックスタート</span>
-                </QuickStart>
+                </FancyLinkPrimary>
             </Box>
         </Container>
     )
