@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import { LinkPrimary } from '../components/shared/Button'
+import { FancyLinkPrimary, LinkPrimary } from '../components/shared/Button'
 
 const Container = styled.div`
     display: flex;
@@ -21,7 +21,9 @@ const Title = styled.h1`
 const Description = styled.p`
     margin-bottom: 1em;
 `
-const QuickStart = styled(LinkPrimary)``
+const QuickStart = styled(FancyLinkPrimary)`
+    margin-bottom: 1em;
+`
 
 const Landing: FC = () => {
     return (
@@ -31,7 +33,10 @@ const Landing: FC = () => {
                 A fun way to practise Japanese syllabary and learn basic
                 vocabulary
             </Description>
-            <QuickStart to="/quiz">Quick start</QuickStart>
+            <QuickStart to="/quiz">
+                <span>Quick start</span>
+                <span>クイックスタート</span>
+            </QuickStart>
         </Container>
     )
 }
