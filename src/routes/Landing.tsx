@@ -9,7 +9,7 @@ const Container = styled.div`
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    padding: 2em;
+    padding: 1em;
 `
 
 const Box = styled.div`
